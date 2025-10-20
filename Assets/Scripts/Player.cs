@@ -100,7 +100,7 @@ public class Player : MonoBehaviour {
         bullet.GetComponent<Rigidbody2D>().linearVelocity = offset * bulletSpeed;
 
         // Destroy bullet after 3 seconds
-        Destroy(bullet, 1.5f);
+        Destroy(bullet, 1f);
 
         // Start the delay
         yield return new WaitForSeconds(1 / fireRate);

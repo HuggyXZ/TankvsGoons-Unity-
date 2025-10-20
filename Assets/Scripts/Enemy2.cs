@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class Enemy2 : MonoBehaviour {
     [SerializeField] private AudioSource deathSound;
     [SerializeField] private AudioSource damagedSound;
     [SerializeField] private AudioSource playerDeathSound;
 
-    [SerializeField] float enemyHealth = 100f;
-    [SerializeField] float enemyMoveSpeed = 2f;
+    [SerializeField] float enemyHealth = 200f;
+    [SerializeField] float enemyMoveSpeed = 5f;
     Quaternion targetRotation;
     Vector2 moveDirection;
     bool disableEnemy = false;
@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour {
 
             if (enemyHealth <= 0) {
                 AudioSource.PlayClipAtPoint(deathSound.clip, transform.position);
-                GameManager.instance.AddScore(1);
+                GameManager.instance.AddScore(5);
                 Destroy(gameObject);
             }
             else {

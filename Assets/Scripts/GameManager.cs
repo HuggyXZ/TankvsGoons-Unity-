@@ -1,16 +1,30 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance { get; private set; }
 
+    public event EventHandler OnCoinValueReached;
+    private int coinValue = 10;
+
     private bool gameOver = false;
+    private bool coinEventTriggered = false;
+
     [SerializeField] private int score = 0;
+
+
 
     private void Awake() {
         instance = this;
+    }
+
+    private void Update() {
+        if (!coinEventTriggered && score >= coinValue) {
+            coinEventTriggered = true;
+            OnCoinValueReached?.Invoke(this, EventArgs.Empty);
+        }
     }
 
     public void GameOver() {
