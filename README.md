@@ -1,4 +1,9 @@
 # TankvsGoons-Unity-
-Testing version control
 
-Hello, today is 10/20/2025.
+Play: https://huggyxz.itch.io/tank-vs-goons
+
+Move: WASD or Arrow keys
+
+Shoot: Left Click
+
+My first game with Unity :D.
