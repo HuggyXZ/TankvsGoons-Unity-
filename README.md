@@ -7,4 +7,4 @@ Move: WASD or Arrow keys
 Shoot: Left Click
 
 My first game with Unity :D.
-Learning C#
+Learning C# and Unity
